@@ -58,7 +58,9 @@
   <!-- NAV -->
   <nav class="fixed top-0 left-0 right-0 z-50 border-b border-ink-3 bg-ink/90 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-paper font-black text-xl tracking-tight">inqb8</a>
+      <a href="#" class="flex items-center h-full">
+        <img src="assets/logo.png" alt="Inqb8" class="h-10 object-contain" />
+      </a>
       <div class="hidden md:flex items-center gap-8 text-sm text-smoke">
         <a href="#model" class="hover:text-paper transition-colors">Model</a>
         <a href="#hoe" class="hover:text-paper transition-colors">Werkwijze</a>
@@ -247,22 +249,18 @@
   <!-- FOOTER -->
   <footer class="border-t border-ink-3 py-8">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="font-black text-paper text-lg tracking-tight">inqb8</div>
+      <img src="assets/logo.png" alt="Inqb8" class="h-8 object-contain" />
       <div class="text-smoke text-sm">© 2026 Inqb8. Alle rechten voorbehouden.</div>
       <div class="font-mono text-smoke text-xs">inqb8.nl</div>
     </div>
   </footer>
 
   <script>
-    // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(el => {
-        if (el.isIntersecting) {
-          el.target.classList.add('visible');
-        }
+        if (el.isIntersecting) { el.target.classList.add('visible'); }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
